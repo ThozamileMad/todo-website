@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% include "head.html" %}
+        <link rel="stylesheet" href="{{ url_for('static', filename='create-todo-styles.css') }}">
+    </head>
+    <body>
+        <main>
+            <section id="title-section">
+                {% include "navigation-bar.html" %}
+            </section>
+
+            <section id="main-section">
+                <div class="main-button-div">
+                    <a class="logout main-button" href="{{ url_for('logout', username=username) }}">Logout</a>
+                    <a class="create main-button" href="{{ url_for('create_todo', username=username) }}">Create List<i class="fa-solid fa-list"></i></a>
+                </div>
+                {% for num in range(todos_len): %}
+                    <div class="card text-center">
+                        <div class="card-header">
+                            <h5>
+                                {{ todos[num]["name"] }}({{ todos[num]["date"] }})
+                                <a class="delete" href="{{ url_for('delete_task', id=todos[num]['todo'].id) }}"><i class="fa-solid fa-trash"></i></a>
+                            </h5>
+
+                        </div>
+                        <div class="card-body">
+                            <form method="POST" novalidate>
+                                {% for num2 in range(10): %}
+                                    {% if todos[num]["tasks"][num2] != "": %}
+                                        {% if todos[num]["tasks"][num2] != " ": %}
+                                            <div class="label-checkbox">
+                                                    <input id="lst{{ num }}-task{{ num2 }}" name="lst{{ num }}-task{{ num2 }}" type="checkbox">
+                                                    <label for="lst{{ num }}-task{{ num2 }}">{{ todos[num]["tasks"][num2] }}</label>
+                                            </div>
+                                        {% endif %}
+                                    {% endif %}
+                                {% endfor %}
+                                <input class="submit" type="submit">
+                            </form>
+                        </div>
+                    </div>
+                {% endfor %}
+            </section>
+        </main>
+    </body>
+</html>

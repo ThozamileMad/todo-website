@@ -1,0 +1,91 @@
+
+form {
+    text-align: left;
+}
+
+/** Title Section **/
+#title-section {
+    margin-bottom: 3%;
+}
+
+/** Main Section **/
+#main-section {
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.main-button-div {
+    text-align: center;
+}
+
+.main-button {
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    background-color: #35A29F;
+    text-align: center;
+}
+
+.main-button:hover {
+    background-color: #088395;
+}
+
+.fa-list {
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center;
+}
+
+.card {
+    margin: 5% auto 7% auto;
+}
+
+.fa-trash:hover {
+    color: red;
+}
+
+.checkbox-label {
+    margin-bottom: 10px;
+}
+
+.button {
+    text-decoration: none;
+    color: white;
+}
+
+.button.delete {
+    background-color: red;
+}
+
+.submit {
+    width: 100%;
+    background-color: #35A29F;
+    color: white;
+    border: none;
+    height: 40px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.submit:hover {
+    background-color: #088395;
+}
+
+@media (max-width: 500px) {
+	/** Title Section **/
+	#title-section {
+    	    margin-bottom: 5%;
+	}
+
+	/** Main Section **/
+	#main-section {
+    	    padding-left: 8%;
+            padding-right: 8%;
+	}
+
+	.card {
+        margin: 10% auto 12% auto;
+    }
+}

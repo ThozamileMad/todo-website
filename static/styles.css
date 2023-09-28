@@ -1,0 +1,65 @@
+
+h2 {
+    margin-top: 0
+}
+
+em {
+    color: #35A29F;
+}
+
+
+/** Main Section **/
+#main-section {
+    padding-top: 100px;
+    padding-right: 300px;
+    padding-left: 300px;
+}
+
+.main-header {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+}
+
+.todo-list {
+    width: 350px;
+    float: right;
+}
+
+.main-button {
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    background-color: #35A29F;
+}
+
+.main-button:hover {
+    background-color: #088395;
+}
+
+.logout {
+    background-color: #3085C3;
+}
+
+@media (max-width: 500px) {
+    #main-section {
+        padding-top: 20px;
+        padding-bottom: 40px;
+        padding-left: 0;
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .todo-list {
+        float: none;
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 499px) {
+    #main-section {
+        padding-top: 50px;
+        padding-left: 150px;
+        padding-right: 150px;
+    }
+}

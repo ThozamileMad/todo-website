@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% include "head.html" %}
+        <link href="../static/styles.css" rel="stylesheet">
+    </head>
+    <body>
+        <main>
+            <section id="title-section">
+                {% include "navigation-bar.html" %}
+            </section>
+
+            <section id="main-section">
+                <img class="todo-list" src="https://cdn-icons-png.flaticon.com/512/10810/10810064.png" alt="Todo List">
+                <h2 class="main-header">Create an <em>awesome</em> todo list</h2>
+                <a class="login main-button" href="{{ url_for('login') }}">Login</a>
+                <a class="register main-button" href="{{ url_for('register') }}">Register</a>
+            </section>
+        </main>
+    </body>
+</html>
